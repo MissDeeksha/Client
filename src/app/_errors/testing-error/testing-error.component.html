@@ -1,0 +1,15 @@
+<ng-container>
+    <button type="submit" (click)="get400Error()" class="btn btn-outline-primary mr-3">400 Error</button>
+    <button type="submit" (click)="get401Error()" class="btn btn-outline-primary mr-3">401 Error</button>
+    <button type="submit" (click)="get404Error()" class="btn btn-outline-primary mr-3">404 Error</button>
+    <button type="submit" (click)="get500Error()" class="btn btn-outline-primary mr-3">500 Error</button>
+    <button type="submit" (click)="get400ValidationError()" class="btn btn-outline-primary mr-3">400 Validation Error</button>
+
+    <div class="row mt-5" *ngIf="validationErrors.length > 0">
+        <ul class="text-danger">
+           <li *ngFor="let err of validationErrors">
+              {{err}}
+            </li>
+        </ul>
+    </div>
+</ng-container>
