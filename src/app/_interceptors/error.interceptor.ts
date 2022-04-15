@@ -37,8 +37,7 @@ export class ErrorInterceptor implements HttpInterceptor {
                 this.toastr.error(error.error, error.status);
               }
               break;
-              case 401:
-                debugger;
+              case 401:                
                 this.toastr.error(error.statusText, error.status);
                 break;
               case 404:

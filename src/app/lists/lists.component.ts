@@ -20,8 +20,7 @@ pagination: Pagination;
     this.loadLikes();
   }
 
-  loadLikes(){
-    debugger;
+  loadLikes(){    
     this.memberService.getLikes(this.predicate, this.pageNumber, this.pageSize).subscribe(response => {
       this.members = response.result;
       this.pagination = response.pagination;
